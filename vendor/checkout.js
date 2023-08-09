@@ -136,18 +136,24 @@ document.getElementById("submitButton").addEventListener("click", function() {
     }
 
     console.log(email)
-    // fetch("URL_DE_TU_API", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify({ email: email })
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-        
-    // })
-    // .catch(error => {
-    //     console.error("Error:", error);
-    // });
+
+    fetch(`https://libreriadigital-1b8b278b9395.herokuapp.com/api/mp/pagar?email=${email}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error('Error en la solicitud');
+        }
+    })
+    .then(initPoint => {
+        window.location.href = initPoint;
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
 });
