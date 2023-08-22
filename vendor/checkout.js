@@ -129,15 +129,24 @@ document.getElementById("submitButton").addEventListener("click", function() {
 	var emailInput = document.getElementById("emailInput");
     var email = emailInput.value;
 
+    var upsell = document.getElementById("item_curso1");
+    var upsellDisplay = upsell.style.display;
+
+    if (upsellDisplay === "none") {
+        upsellAdded = false;
+    } else {
+        upsellAdded = true;
+    }
+
     if (!emailInput.checkValidity()) {
         emailInput.classList.add("is-invalid");
         alert('El email ingresado no es valido.')
         return;
     }
 
-    console.log(email)
+    console.log(upsellAdded)
 
-    fetch(`https://libreriadigital-1b8b278b9395.herokuapp.com/api/mp/pagar?email=${email}`, {
+    fetch(`https://libreriadigital-1b8b278b9395.herokuapp.com/api/mp/pagar?email=${email}&upsell=${upsell}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -157,3 +166,31 @@ document.getElementById("submitButton").addEventListener("click", function() {
         console.error("Error:", error);
     });
 });
+
+// document.getElementById('upsell-checkbox').addEventListener('change', function() {
+//     const addUpsellProduct = this.checked; // 'this' hace referencia al checkbox
+//     const audiolibroItem = document.getElementById('item_audiolibro');
+//     console.log(audiolibroItem)
+//     if (addUpsellProduct) {
+//         // Si el upsell está activado, muestra el elemento del audiolibro
+//         audiolibroItem.classList.remove('hidden');
+//       } else {
+//         // Si el upsell está desactivado, oculta el elemento del audiolibro
+//         audiolibroItem.classList.add('hidden');
+//       }
+//   });
+
+  document.getElementById('add-upsell').addEventListener('click', function() {
+    console.log('hola')
+    const audiolibroItem = document.getElementById('item_audiolibro');
+    console.log(audiolibroItem)
+        audiolibroItem.classList.remove('hidden');
+
+  });
+
+  document.getElementById('remove-upsell').addEventListener('click', function() {
+    const audiolibroItem = document.getElementById('item_audiolibro');
+    console.log(audiolibroItem)
+        audiolibroItem.classList.remove('hidden');
+
+  });

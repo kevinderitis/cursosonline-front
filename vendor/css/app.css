@@ -1147,3 +1147,7 @@ select.error {
     border-style: solid;
     border-width: 1.2px;
 }
+
+.hidden {
+    display: none;
+  }
