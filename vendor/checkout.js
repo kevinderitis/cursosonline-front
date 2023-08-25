@@ -126,6 +126,7 @@ $(document).ready(function () {
 
 
 document.getElementById("submitButton").addEventListener("click", function() {
+    console.log('redirect')
     var procrastinacion = document.getElementById('procrastinacion');
     var flag = procrastinacion ? procrastinacion.getAttribute("data-value") : false;
    
