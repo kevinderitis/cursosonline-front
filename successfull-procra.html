@@ -71,10 +71,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c5986', end
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '431854575502878');
-    fbq('track', 'Purchase', {
-    value: 1699.00,  // Valor total de la compra
-    currency: 'ARS' // Moneda de la compra
-  });
+    
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=431854575502878&ev=PageView&noscript=1"
@@ -83,10 +80,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c5986', end
 </head>
 
 <body 0class="avertac">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M862BL7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Meta Pixel Code Compra -->
+  <script>
+    fbq('track', 'Purchase', {
+    value: 1699.00,  // Valor total de la compra
+    currency: 'ARS' // Moneda de la compra
+  });
+  </script>
+  <!-- End Meta Pixel Code Compra-->
   <!-- Website Header -->
   <header class="">
     <div class="container">
