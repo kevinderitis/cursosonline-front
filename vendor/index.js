@@ -1,44 +1,20 @@
-// const data = {
-//     pretitulo: "¿Quieres disfrutar de un dulce placer?",
-//     titulo: "Variedad de Chicles Deliciosos",
-//     precioTotal: "$2",
-//     precioConDescuento: "$1",
-//     tituloParrafo1: "Saborea nuestros chicles con los sabores más dulces y divertidos.",
-//     tituloParrafo2: "Que son los chicles?",
-//     parrafo2: "este es el parrafo 2",
-//     parrafo1: "En nuestra tienda, te ofrecemos una amplia gama de chicles con sabores únicos que te harán volver por más. Desde clásicos sabores hasta combinaciones extravagantes, estamos seguros de que encontrarás algo que te encante.",
-//     beneficios: "Beneficios",
-//     parrafoBeneficios: "Este es el parrafo de beneficios",
-//     aprender: "Vas a aprender",
-//     parrafoAprender1: `• Fundamentos de Prompt Engineering1`,
-//     parrafoAprender2: `• Fundamentos de Prompt Engineering2`,
-//     parrafoAprender3: `• Fundamentos de Prompt Engineering3`,
-//     parrafoAprender4: `• Fundamentos de Prompt Engineering4`,
-//     parrafoAprender5: `• Fundamentos de Prompt Engineering5`,
-//     parrafoAprender6: `...y muchísimo más!`,
-//     tituloAcceso: `Acceso para siempre`,
-//     parrafoAcceso: `Recibilo para imprimir o leer desde tu celular o PC`,
-//     opinionesTitulo: 'Todo el mundo lo recomienda',
-//     opinion1Titulo: 'Muchas gracias locos!',
-//     opinion1: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
-//     opinion1Nombre: 'Carlos lopez',
-//     opinion2Titulo: 'Muchas gracias locos!',
-//     opinion2: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
-//     opinion2Nombre: 'Carlos lopez',
-//     opinion3Titulo: 'Muchas gracias locos!',
-//     opinion3: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
-//     opinion3Nombre: 'Carlos lopez',
-//     preguntas1: 'Para siempre',
-//     preguntas2: 'Internet',
-//     preguntas3: 'Garantia',
-//     parrafoFinalTitulo: 'Inicia hoy tu viaje!',
-//     parrafoFinal: 'Inicia ahoraaa',
-//     mobileSectionTitulo: 'El futuro es YA',
-//     mobileSectionParrafo: 'Este es el texto que va en la parte mobile',
-// }
+const producto1Img = document.getElementById("producto1-img");
+const producto2Img = document.getElementById("producto2-img");
+const producto2Img2 = document.getElementById("producto2-img2");
+const producto3Img = document.getElementById("producto3-img");
 
-const data = {
-    pretitulo: "¿Quieres sumergirte en el mundo del desarrollo backend?",
+var queryString = window.location.search;
+
+var params = new URLSearchParams(queryString);
+
+var curso = params.get('curso');
+
+if (!curso) {
+    // window.location.href = "https://www.google.com"; 
+}
+
+const cursoBackend = {
+    pretitulo: `¿Quieres sumergirte en el mundo del desarrollo backend?`,
     titulo: "Aprende Programación Backend con Node.js",
     precioTotal: "$100",
     precioConDescuento: "$70",
@@ -76,6 +52,60 @@ const data = {
     mobileSectionParrafo: "Accede a los contenidos desde tu dispositivo móvil y continúa aprendiendo estés donde estés.",
 };
 
+const cursoChicles = {
+    pretitulo: "¿Quieres disfrutar de un dulce placer?",
+    titulo: "Variedad de Chicles Deliciosos",
+    precioTotal: "$2",
+    precioConDescuento: "$1",
+    tituloParrafo1: "Saborea nuestros chicles con los sabores más dulces y divertidos.",
+    tituloParrafo2: "Que son los chicles?",
+    parrafo2: "este es el parrafo 2",
+    parrafo1: "En nuestra tienda, te ofrecemos una amplia gama de chicles con sabores únicos que te harán volver por más. Desde clásicos sabores hasta combinaciones extravagantes, estamos seguros de que encontrarás algo que te encante.",
+    beneficios: "Beneficios",
+    parrafoBeneficios: "Este es el parrafo de beneficios",
+    aprender: "Vas a aprender",
+    parrafoAprender1: `• Fundamentos de Prompt Engineering1`,
+    parrafoAprender2: `• Fundamentos de Prompt Engineering2`,
+    parrafoAprender3: `• Fundamentos de Prompt Engineering3`,
+    parrafoAprender4: `• Fundamentos de Prompt Engineering4`,
+    parrafoAprender5: `• Fundamentos de Prompt Engineering5`,
+    parrafoAprender6: `...y muchísimo más!`,
+    tituloAcceso: `Acceso para siempre`,
+    parrafoAcceso: `Recibilo para imprimir o leer desde tu celular o PC`,
+    opinionesTitulo: 'Todo el mundo lo recomienda',
+    opinion1Titulo: 'Muchas gracias locos!',
+    opinion1: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
+    opinion1Nombre: 'Carlos lopez',
+    opinion2Titulo: 'Muchas gracias locos!',
+    opinion2: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
+    opinion2Nombre: 'Carlos lopez',
+    opinion3Titulo: 'Muchas gracias locos!',
+    opinion3: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
+    opinion3Nombre: 'Carlos lopez',
+    preguntas1: 'Para siempre',
+    preguntas2: 'Internet',
+    preguntas3: 'Garantia',
+    parrafoFinalTitulo: 'Inicia hoy tu viaje!',
+    parrafoFinal: 'Inicia ahoraaa',
+    mobileSectionTitulo: 'El futuro es YA',
+    mobileSectionParrafo: 'Este es el texto que va en la parte mobile',
+}
+
+var data;
+
+switch (curso) {
+    case 'backend':
+        data = cursoBackend;
+        break;
+    case 'chicles':
+        data = cursoChicles;
+        break;
+    default:
+        console.error('Curso no reconocido:', curso);
+        break;
+}
+
+console.log(data)
 
                
 
@@ -121,5 +151,18 @@ async function cargarDatos() {
 
 }
 
+async function cargarImagenes() {
+    producto1Img.src = `img/${curso}/producto1.png`
+    producto2Img.src = `img/${curso}/producto2.png`
+    producto2Img2.src = `img/${curso}/producto2.png`
+    producto3Img.src = `img/${curso}/producto3.png`
+
+}
+
+
+
 
 cargarDatos();
+cargarImagenes()
+
+
