@@ -126,6 +126,17 @@ $(document).ready(function () {
 
 
 document.getElementById("submitButton").addEventListener("click", function() {
+    console.log('redirect')
+    var procrastinacion = document.getElementById('procrastinacion');
+    var flag = procrastinacion ? procrastinacion.getAttribute("data-value") : false;
+   
+    var curso; 
+    if(flag){
+        curso = 'procrastinacion'
+    }else{
+        curso = 'prompt'
+    };
+    
 	var emailInput = document.getElementById("emailInput");
     var email = emailInput.value;
 
@@ -146,7 +157,7 @@ document.getElementById("submitButton").addEventListener("click", function() {
 
     console.log(upsellAdded)
 
-    fetch(`https://libreriadigital-1b8b278b9395.herokuapp.com/api/mp/pagar?email=${email}&upsell=${upsell}`, {
+    fetch(`https://libreriadigital-1b8b278b9395.herokuapp.com/api/mp/pagar?curso=${curso}&email=${email}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -166,31 +177,3 @@ document.getElementById("submitButton").addEventListener("click", function() {
         console.error("Error:", error);
     });
 });
-
-// document.getElementById('upsell-checkbox').addEventListener('change', function() {
-//     const addUpsellProduct = this.checked; // 'this' hace referencia al checkbox
-//     const audiolibroItem = document.getElementById('item_audiolibro');
-//     console.log(audiolibroItem)
-//     if (addUpsellProduct) {
-//         // Si el upsell está activado, muestra el elemento del audiolibro
-//         audiolibroItem.classList.remove('hidden');
-//       } else {
-//         // Si el upsell está desactivado, oculta el elemento del audiolibro
-//         audiolibroItem.classList.add('hidden');
-//       }
-//   });
-
-  document.getElementById('add-upsell').addEventListener('click', function() {
-    console.log('hola')
-    const audiolibroItem = document.getElementById('item_audiolibro');
-    console.log(audiolibroItem)
-        audiolibroItem.classList.remove('hidden');
-
-  });
-
-  document.getElementById('remove-upsell').addEventListener('click', function() {
-    const audiolibroItem = document.getElementById('item_audiolibro');
-    console.log(audiolibroItem)
-        audiolibroItem.classList.remove('hidden');
-
-  });
