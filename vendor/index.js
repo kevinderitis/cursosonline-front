@@ -2,6 +2,8 @@ const producto1Img = document.getElementById("producto1-img");
 const producto2Img = document.getElementById("producto2-img");
 const producto2Img2 = document.getElementById("producto2-img2");
 const producto3Img = document.getElementById("producto3-img");
+const background = document.getElementById("gr");
+const background2 = document.getElementById("gr2");
 
 var queryString = window.location.search;
 
@@ -52,26 +54,25 @@ const cursoBackend = {
     mobileSectionParrafo: "Accede a los contenidos desde tu dispositivo móvil y continúa aprendiendo estés donde estés.",
 };
 
-const cursoChicles = {
-    pretitulo: "¿Quieres disfrutar de un dulce placer?",
-    titulo: "Variedad de Chicles Deliciosos",
-    precioTotal: "$2",
-    precioConDescuento: "$1",
-    tituloParrafo1: "Saborea nuestros chicles con los sabores más dulces y divertidos.",
-    tituloParrafo2: "Que son los chicles?",
-    parrafo2: "este es el parrafo 2",
-    parrafo1: "En nuestra tienda, te ofrecemos una amplia gama de chicles con sabores únicos que te harán volver por más. Desde clásicos sabores hasta combinaciones extravagantes, estamos seguros de que encontrarás algo que te encante.",
-    beneficios: "Beneficios",
-    parrafoBeneficios: "Este es el parrafo de beneficios",
+const cursoProcrastinacion = {
+    pretitulo: "¡No esperes más, tene esa vida productiva y comprometida que queres!",
+    titulo: "Curso para vencer la Procrastinación",
     aprender: "Vas a aprender",
     parrafoAprender1: `• Fundamentos de Prompt Engineering1`,
     parrafoAprender2: `• Fundamentos de Prompt Engineering2`,
     parrafoAprender3: `• Fundamentos de Prompt Engineering3`,
     parrafoAprender4: `• Fundamentos de Prompt Engineering4`,
-    parrafoAprender5: `• Fundamentos de Prompt Engineering5`,
-    parrafoAprender6: `...y muchísimo más!`,
-    tituloAcceso: `Acceso para siempre`,
-    parrafoAcceso: `Recibilo para imprimir o leer desde tu celular o PC`,
+    parrafoAprender5: `...y muchísimo más!`,
+    precioTotal: "$5.664",
+    precioConDescuento: "$1.699",
+    tituloParrafo1: "Deja de lado la procrastinación",
+    tituloParrafo2: "¿Qué es la procrastinación?",
+    parrafo2: "La procrastinación es cuando posponemos hacer algo importante o necesario, como una tarea o responsabilidad, y en lugar de hacerlo en ese momento, lo dejamos para después. A diario, esto puede hacernos sentir mal porque sabemos que deberíamos estar haciendo esa tarea o responsabilidad, pero por alguna razón, simplemente no lo hacemos. La procrastinación puede afectarnos en diferentes áreas de nuestra vida, como el trabajo, la escuela o incluso las tareas diarias, y es importante entender cómo manejarla para ser más efectivos y sentirnos mejor con lo que hacemos..",
+    parrafo1: "En este libro, desentrañaremos las raíces de la procrastinación, explorando desde el miedo y la falta de claridad hasta las distracciones modernas. Entenderás cómo esta fuerza invisible puede socavar tus esfuerzos y aprenderás a desarmarla.",
+    beneficios: "Beneficios",
+    parrafoBeneficios: "Mejoraras en tu desarrollo tanto personal como laboral. Ganaras hábitos, liberarás tiempo, fortalecerás tu autoconfianza, mejorarás tus relaciones y te acercarás a tus objetivos de manera constante. Vas a tener el control de tu tiempo y energía, permitiéndote aprovechar al máximo cada día y crear una vida más plena.",
+    tituloAcceso: `sadasdasdadadadadaa crastinación!`,
+    parrafoAcceso: `Recibilo para imprimir o leer desde tu celular o PC!!!!!!!!`,
     opinionesTitulo: 'Todo el mundo lo recomienda',
     opinion1Titulo: 'Muchas gracias locos!',
     opinion1: 'Aaslñdkaslñdkalsñdkalsñd alksdñlakdlsañkdeñlak adlñakdslñkalñdkalsñ adñlakslñdaklñaskdaldka lñskdalña kañlf alñk lakslgfaksf{lka a',
@@ -97,8 +98,8 @@ switch (curso) {
     case 'backend':
         data = cursoBackend;
         break;
-    case 'chicles':
-        data = cursoChicles;
+    case 'procrastinacion':
+        data = cursoProcrastinacion;
         break;
     default:
         console.error('Curso no reconocido:', curso);
@@ -120,7 +121,7 @@ async function cargarDatos() {
     document.getElementById('beneficios').textContent = data.beneficios;
     document.getElementById('parrafo-beneficios').textContent = data.parrafoBeneficios;
     document.getElementById('parrafo2').textContent = data.parrafo2;
-    document.getElementById('aprender').textContent = data.parrafoAprender;
+    document.getElementById('aprender').textContent = data.aprender;
     document.getElementById('parrafo-aprender1').textContent = data.parrafoAprender1;
     document.getElementById('parrafo-aprender2').textContent = data.parrafoAprender2;
     document.getElementById('parrafo-aprender3').textContent = data.parrafoAprender3;
@@ -156,6 +157,8 @@ async function cargarImagenes() {
     producto2Img.src = `img/${curso}/producto2.png`
     producto2Img2.src = `img/${curso}/producto2.png`
     producto3Img.src = `img/${curso}/producto3.png`
+    background.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('img/${curso}/background1.jpg')`;
+    background2.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('img/${curso}/background2.jpg')`
 
 }
 
