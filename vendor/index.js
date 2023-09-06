@@ -127,7 +127,6 @@ async function cargarDatos() {
     document.getElementById('parrafo-aprender3').textContent = data.parrafoAprender3;
     document.getElementById('parrafo-aprender4').textContent = data.parrafoAprender4;
     document.getElementById('parrafo-aprender5').textContent = data.parrafoAprender5;
-    document.getElementById('parrafo-aprender6').textContent = data.parrafoAprender6;
     document.getElementById('acceso-titulo').textContent = data.tituloAcceso;
     document.getElementById('parrafo-acceso').textContent = data.parrafoAcceso;
     document.getElementById('opiniones-titulo').textContent = data.opinionesTitulo;
