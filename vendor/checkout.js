@@ -10,9 +10,9 @@ email.on('blur', function () {
             if (!hint.html()) {
                 // misspell - display hint element
                 var suggestion = "Quisiste decir <span class='suggestion'>" +
-                        "<span class='address'>" + suggestion.address + "</span>"
-                        + "@<a href='#' class='domain'>" + suggestion.domain +
-                        "</a></span>?";
+                    "<span class='address'>" + suggestion.address + "</span>"
+                    + "@<a href='#' class='domain'>" + suggestion.domain +
+                    "</a></span>?";
 
                 email.addClass("error");
                 errorValidEmail = true;
@@ -55,15 +55,15 @@ $(document).ready(function () {
         var error = false;
         var wizard = $("#procederPagoForm");
 
-        if (!wizard.validate({errorPlacement: function (error, element) {}}).element("#nombre")) {
+        if (!wizard.validate({ errorPlacement: function (error, element) { } }).element("#nombre")) {
             error = true;
         }
 
-        if (!wizard.validate({errorPlacement: function (error, element) {}}).element("#apellido")) {
+        if (!wizard.validate({ errorPlacement: function (error, element) { } }).element("#apellido")) {
             error = true;
         }
 
-        if (!wizard.validate({errorPlacement: function (error, element) {}}).element("#celular")) {
+        if (!wizard.validate({ errorPlacement: function (error, element) { } }).element("#celular")) {
             error = true;
         }
 
@@ -71,83 +71,63 @@ $(document).ready(function () {
         //	error=true;
         //}
 
-        if (email.val() == '')
-        {
+        if (email.val() == '') {
             error == true;
             email.removeClass("valid");
             email.addClass("error");
-        } else
-        {
+        } else {
             email.removeClass("error");
             email.addClass("valid");
         }
 
 
-        if (errorValidEmail == false)
-        {
-            if (email.val() == '')
-            {
+        if (errorValidEmail == false) {
+            if (email.val() == '') {
                 error == true;
                 email.removeClass("valid");
                 email.addClass("error");
-            } else
-            {
+            } else {
                 email.removeClass("error");
                 email.addClass("valid");
             }
         }
 
-        if (error == false && errorValidEmail == false && email.val() != '')
-        {
+        if (error == false && errorValidEmail == false && email.val() != '') {
             $('#spinnerloading').show();
             str = '';
             $.ajax(
-                    {
-                        url: "realizarVenta.php",
-                        type: "get",
-                        data: {
-                            nombre: $('#nombre').val(),
-                            apellido: $('#apellido').val(),
-                            celular: $('#celular').val(),
-                            email: $('#email').val(),
-                            curso: $('#curso').val(),
-                        },
-                        success: function (response) {
-                            window.location.href = response;
-                        },
-                        error: function (xhr) {
-                            alert(xhr);
-                        }
-                    });
+                {
+                    url: "realizarVenta.php",
+                    type: "get",
+                    data: {
+                        nombre: $('#nombre').val(),
+                        apellido: $('#apellido').val(),
+                        celular: $('#celular').val(),
+                        email: $('#email').val(),
+                        curso: $('#curso').val(),
+                    },
+                    success: function (response) {
+                        window.location.href = response;
+                    },
+                    error: function (xhr) {
+                        alert(xhr);
+                    }
+                });
         }
     });
 
 })
 
 
-document.getElementById("submitButton").addEventListener("click", function() {
-    console.log('redirect')
-    var procrastinacion = document.getElementById('procrastinacion');
-    var flag = procrastinacion ? procrastinacion.getAttribute("data-value") : false;
-   
-    var curso; 
-    if(flag){
-        curso = 'procrastinacion'
-    }else{
-        curso = 'prompt'
-    };
-    
-	var emailInput = document.getElementById("emailInput");
+document.getElementById("submitButton").addEventListener("click", function () {
+    const url = new URL(window.location.href);
+    const searchParams = url.searchParams;
+    const curso = searchParams.get("curso");
+
+    console.log(curso)
+
+    var emailInput = document.getElementById("emailInput");
     var email = emailInput.value;
-
-    var upsell = document.getElementById("item_curso1");
-    var upsellDisplay = upsell.style.display;
-
-    if (upsellDisplay === "none") {
-        upsellAdded = false;
-    } else {
-        upsellAdded = true;
-    }
 
     if (!emailInput.checkValidity()) {
         emailInput.classList.add("is-invalid");
@@ -155,7 +135,6 @@ document.getElementById("submitButton").addEventListener("click", function() {
         return;
     }
 
-    console.log(upsellAdded)
 
     fetch(`https://libreriadigital-1b8b278b9395.herokuapp.com/api/mp/pagar?curso=${curso}&email=${email}`, {
         method: "GET",
@@ -163,17 +142,49 @@ document.getElementById("submitButton").addEventListener("click", function() {
             "Content-Type": "application/json"
         }
     })
-    .then(response => {
-        if (response.ok) {
-            return response.text();
-        } else {
-            throw new Error('Error en la solicitud');
-        }
-    })
-    .then(initPoint => {
-        window.location.href = initPoint;
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Error en la solicitud');
+            }
+        })
+        .then(initPoint => {
+            window.location.href = initPoint;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
 });
+
+
+function ajustarTitulos() {
+    const url = new URL(window.location.href);
+    const searchParams = url.searchParams;
+    const curso = searchParams.get("curso");
+
+    const tituloCurso = document.getElementById('nombre-curso');
+    const precioTotal = document.getElementById('checkout-precio-total');
+    const precioDescuento = document.getElementById('checkout-precio-promo');
+    const precioFinal = document.getElementById('checkout-precio-final');
+
+    let cursosDataComplete;
+
+    switch (curso) {
+        case 'procrastinacion':
+            cursosDataComplete = cursosData.cursoProcrastinacion;
+            break;
+        case 'promt':
+            cursosDataComplete = cursosData.cursoBackend;
+            break;
+    }
+
+    tituloCurso.innerText = cursosDataComplete.checkoutTitulo;
+    precioTotal.innerText = cursosDataComplete.precioTotal;
+    precioDescuento.innerText = cursosDataComplete.precioPromo;
+    precioFinal.innerText = cursosDataComplete.precioConDescuento;
+}
+
+ajustarTitulos()
+
+

@@ -1,498 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<!-- Mirrored from aprendeyogaacademia.com/ayurveda/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 16:23:20 GMT -->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Liberia Digital - PDFs Online">
-  <meta name="keywords" content="liberia digital arg, pdfs digitales, curso prompt engineering, cursos online">
-  <meta name="author" content="Liberia Digital Arg">
-  <!-- FavIcon-->
-  <link rel="icon" href="img/fav.html" type="image/png">
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Website core CSS -->
-  <link href="vendor/css/app.css" rel="stylesheet">
-  <!-- Animation CSS -->
-  <link href="vendor/css/animate.css" rel="stylesheet">
-  <link href="vendor/css/hover.css" rel="stylesheet">
-  <!-- Website Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="icon" href="img/logo1.png" type="image/x-icon">
-<link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
-    
-    
-    
-    <style>
-         .cover1{
-     position: relative;
-             min-height: 600px;
-     background: url("img/ayurveda_ebook.jpg") no-repeat scroll 0px 100% / cover transparent;
-    background-position: top ;
-        background-size: 100%;
-}
-        
-        .cover2{
-     position: relative;     
-   min-height: 500px;
-    background: url("img/yoga-online.html") no-repeat scroll 0px 100% / cover transparent;
-            background-position: top;
-              background-size: 100%;
-}
-        
-    .botongradient{
-    background: rgba(156,89,134,1);
-background: -moz-linear-gradient(top, rgba(156,89,134,1) 0%, rgba(156,89,134,1) 38%, rgba(140,66,117,1) 65%, rgba(140,66,117,1) 71%, rgba(140,66,117,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(156,89,134,1)), color-stop(38%, rgba(156,89,134,1)), color-stop(65%, rgba(140,66,117,1)), color-stop(71%, rgba(140,66,117,1)), color-stop(100%, rgba(140,66,117,1)));
-background: -webkit-linear-gradient(top, rgba(156,89,134,1) 0%, rgba(156,89,134,1) 38%, rgba(140,66,117,1) 65%, rgba(140,66,117,1) 71%, rgba(140,66,117,1) 100%);
-background: -o-linear-gradient(top, rgba(156,89,134,1) 0%, rgba(156,89,134,1) 38%, rgba(140,66,117,1) 65%, rgba(140,66,117,1) 71%, rgba(140,66,117,1) 100%);
-background: -ms-linear-gradient(top, rgba(156,89,134,1) 0%, rgba(156,89,134,1) 38%, rgba(140,66,117,1) 65%, rgba(140,66,117,1) 71%, rgba(140,66,117,1) 100%);
-background: linear-gradient(to bottom, rgba(156,89,134,1) 0%, rgba(156,89,134,1) 38%, rgba(140,66,117,1) 65%, rgba(140,66,117,1) 71%, rgba(140,66,117,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c5986', endColorstr='#8c4275', GradientType=0 );
-    }
-        
-    .color1{
-        
-        color:#9c5986; 
-        
-        
-        }
-    </style>
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '431854575502878');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=431854575502878&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librería digital Argentina</title>
+  <!-- Enlace a los archivos de Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/cardstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
 </head>
 
-<body class="avertac">
-  <!-- Website Header -->
-  <header class="">
+<style>
+  .parallax-section {
+    background-image: url('img/Fondo1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 100px 0;
+  }
+
+  .parallax-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.781);
+    padding: 50px;
+    border-radius: 25px;
+  }
+
+  .product-section {
+    background-color: rgba(255, 255, 255, 0.925);
+    position: relative;
+    padding: 60px 0;
+  }
+
+  .quebuscamos-section {
+    background-image: url('img/Fondo2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 100px 0;
+  }
+
+  .quebuscamos-content {
+    padding: 50px;
+  }
+</style>
+
+<body>
+
+  <!-- Header -->
+  <header>
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-3 col-sm-6 col-12 logo" style="">
-          <img src="img/logo1.png" alt="logo" class="img-fluid" width="40%"></a>
+      <div class="row align-items-center justify-content-center my-4">
+        <div class="col-md-3 col-sm-6 col-12 logo text-center">
+          <img src="img/Logo.png" alt="logo" class="img-fluid" width="40%">
         </div>
-        <div class="col-md-4 hdphone">
-          <p>Libreria digital. Aprende de una manera distinta</p>
+        <div class="col-md-4 hdphone text-center">
+
         </div>
-        <div class="col-md-4 hdphone">
-          <img src="img/seguridad.png" alt="security" class="img-fluid w-75">
+        <div class="col-md-4 hdphone text-center">
+          <img src="img/securityjpg.jpg" alt="security" class="img-fluid w-75">
         </div>
       </div>
     </div>
   </header>
-    
-  <!-- Top producto desktop -->
-    <section class="top-product pb-5 mx-auto " id=" ">
-    <div class="container mx-auto">
-      <div class="row ">
-        <div class="col-md-5 mx-auto">
-          <div class="">
-            <img src="img/producto1.png" id="producto1-img" class="img-fluid rounded" alt="product">
-          </div>
-        </div>
-        <div class="col-md-6 my-auto">
-          <div class="section-heading">
-            <h5 class="text-dark mt-3 mt-md-2" id="pretitulo">Encontrá el cambio que estás buscando</h5>
-            <h1 style="font-size:40px; color: #4793f7;" id="titulo"><b>Curso de Prompt Engineering</b></h1>
-            <h3 class="text-dark mt-3 mt-md-2"><b id="aprender">Vas a aprender:</b></h3>
-          </div>
-          <div class="feature-list mt-4 mt-md-1 ">
-            <ul>
-              <li class="wow fadeIn  animated text-dark " data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;" id="parrafo-aprender1">• Fundamentos de Prompt Engineering<br></li>
-              <li class="wow fadeIn animated text-dark " data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;" id="parrafo-aprender2">• Diseño Avanzado de Prompts<br></li>
-              <li class="wow fadeIn  animated text-dark " data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;" id="parrafo-aprender3">• Estrategias Avanzadas de Prompt Engineering<br></li>
-              <li class="wow fadeIn  animated text-dark " data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;" id="parrafo-aprender4">• Desafíos y Perfeccionamiento de lenguaje humano-maquina<br></li>
-              <li class="wow fadeIn  animated text-dark " data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;" id="parrafo-aprender5">• ...y muchísimo más!<br></li> 
-               
-                             <h1 class="bg-  rounded shadow text-white font-weight-bold p-2 mt-3 col-8 col-md-6 text-center" style="background-color:#fc5757;" ><strike><em id="precioTotal">$4.330</em></strike><span> <em id="precioConDescuento">$1.299</em></span></h1>
-
-              <p class=" ">70% off: el precio vuelve a la normalidad pronto ⏳</p>
-            </ul>
-          </div>
-          <div class="call-button mt-3">
-            <div class="row">
-              <div class="col-md-6 mt-md-3 mt-5 ">
-                <a href="checkout.html" class=" wow flipInX  animated  shadow" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;background-color: #718aff;"  >¡Lo quiero!&nbsp;</a>
-              </div>
-              <div class="col-md-6 text-center payments  col-8 mx-auto mt-3 mt-md-3">
-                <img src="img/seguridad.png" class="img-fluid wow flipInX animated " data-wow-delay="0.3s" alt="payments" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-     
-  
-  <!-- As Featured On Section -->
-  <!-- Video Section -->
-  <div class="py-5 text-white section-parallax" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url(img/Background.jpg);	background-position: top left, top left;	background-size: 100%, 100%;	background-repeat: repeat, repeat;" id="gr">
+  <!-- Top de pag -->
+  <section class="parallax-section">
     <div class="container">
-      <div class="row py-5">
-        <div class="col-md-10">
-          <h1 class="mb-3" id="titulo-parrafo1"><b>Curso de Prompt Engineering</b></h1>
-          <p class="" style="font-size:30px;" id="parrafo1"> Este curso está diseñado para personas interesadas en adentrarse en el mundo de Prompt Engineering, sin importar su nivel de experiencia previa en el campo. Ya seas un principiante curioso o alguien con conocimientos previos en ingeniería, este curso te brindará las herramientas necesarias para comprender y aplicar conceptos de Prompt Engineering de manera efectiva.</p>
-          <p class=" mt-1 font-weight-light mt-4"  style="font-size:20px;" id="dirigido1" > ✅ Dirigido a todo público. No requiere conocimientos previos. </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-5  " id="ch">
-    <div class="container ">
-      <div class="col-md-10  ">
-        <h1 style="font-size:37px; " class=" t"><b id="mobile-section-titulo">El futuro es ahora</b></h1>
-        <p class=" lead " style="font-size:%;" id="mobile-section-parrafo"> 
-          La Prompt Engineering se esfuerza por decodificar la intención detrás de tus instrucciones. Mediante este libro digital, tendrás la oportunidad de adquirir conocimientos y aplicar de manera efectiva los fundamentos y métodos de esta innovadora práctica en ingeniería.</p>
-      </div>
-    </div>
-  </div>
-    
-    <div class="row " id="ch">
-            <div class="col-md-6 mt-3 ">
-              <img class="img-fluid d-blockrounded shadow mx-auto" id="producto2-img" src="img/producto2.png">
-            </div>
-             
-    </div>
-   <section class="py-5 my-auto"  >
-    <div class="container ">
-      <div class="row">
-        <div class=" mx-auto " data-wow-duration="1.8s">
-          <div class="  text-left px-3 ">
-               <h1 class="text-center mt-md-5 mt-3" style="color:#718aff;"><b id="titulo-parrafo2">¿Qué es el Prompt Engineering?</b></h1>
-                <p class="  mt-3 " style="font-size:20px;" id="parrafo2"> 
-                  El Prompt Engineering es un enfoque ingenieril avanzado que se basa en la comprensión y manipulación de modelos de lenguaje, como el utilizado por mí, para generar resultados específicos y deseados.  <b>¡Sus principios se pueden aplicar a cualquier persona!</b>  A través de la interacción con estos modelos, se busca aprovechar su capacidad para generar texto coherente y relevante para resolver una amplia gama de tareas y problemas. El Prompt Engineering implica formular instrucciones y preguntas precisas para obtener respuestas y resultados específicos mediante el modelado del lenguaje. Este enfoque ha encontrado aplicaciones en la generación de contenido, la programación asistida por lenguaje, la resolución de problemas y más. 
-                  <br><br>  
-                       <hr>
-                                   <h1 class="text-center   mt-5" style="color:#718aff;"><b id="beneficios">Beneficios</b></h1>
-
-              <b id="parrafo-beneficios"> <span class=""  style="font-size:20px;"> 
-                    
-                Potencia tu creatividad y eficiencia con el Prompt Engineering. Automatiza tareas, genera soluciones y prototipos rápidos, y reduce errores humanos. Desde programación hasta generación de ideas, descubre cómo este enfoque basado en modelos de lenguaje revoluciona la interacción humano-máquina. Aprovecha sus beneficios para una comunicación más efectiva, exploración de datos y avances en la inteligencia artificial. Desbloquea todo el potencial del Prompt Engineering en tus proyectos. </span></b>
-            </p>
-                
-
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="parallax-content text-white">
+            <h1 class="mb-3 text-center"><b>¡Bienvenidos!</b></h1>
+            <p class="lead">Una manera distinta de brindarte una opción súper accesible a libros que pueden ayudarte a
+              desarrollarte tanto laboral como personalmente. Lo mejor de todo es que te llega a tu correo en formato
+              PDF para que puedas visualizarlo en cualquier dispositivo.</p>
           </div>
-        </div>
-           
-      </div>
-    </div>
-  </section>
-  <!-- Light Grey -->
-    
-    <hr>
-  <section class="py-5 my-auto"  >
-    <div class="container ">
-      <div class="row">
-        <div class=" mx-auto " data-wow-duration="1.8s">
-          <div class="row text-left px-3 ">
-            <div class=" mx-auto my-auto">
-              <h3 class="text-center mt-md-5 mt-3" style="color:#718aff;"><b>Vas a aprender:</b></h3>
-              <ul class="text-center lead">
-                <li>• Fundamentos de Prompt Engineering</li>
-                <li>• Diseño Avanzado de Prompts</li>
-                <li>• Estrategias Avanzadas de Prompt Engineering</li>
-                <li>• Aplicaciones Especializadas de Prompt Engineering</li>
-                <li>• Desafíos y Perfeccionamiento</li>
-                <li>...y muchísimo más!</li>
-               </ul>
-            </div>
-            <div class="call-button mt-3 col-10 col-md-8 mx-auto">
-               <div class="col-m">
-                <a href="checkout.html" class="   wow flipInX  animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s; background-color:#718aff;">Lo quiero&nbsp;</a>
-              </div>
-            </div>
-            </div>
-            
-          </div>
-        </div>
-          <div class="mx-auto" id="gr" data-wow-duration="1.8s">
-           <img class="img-fluid d-block rounded shadow" id="producto2-img2" src="img/producto2.png">
         </div>
       </div>
     </div>
   </section>
-     
-    
-     
-    
-    
-    <div class="py-5 mt-md-5   text-white section-parallax text-center" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url(img/background2.jpg);background-position: top;	background-size: 100%, 100%;background-repeat: repeat, repeat;" id="gr2"  >
-     <div class="container">
-         <div class="col-lg-4   mx-auto">
-             <div class="   text-white"> <img class="img-fluid d-block mb-3 mx-auto" src="img/logo.png" width="250">
-              <h4 class="font-weight-bold" id="acceso-titulo"> Acceso para siempre</h4>
-              <p class="mb-0" id="parrafo-acceso">Recibilo en tu e-mail y descargalo para imprimir o leer desde tu celular o PC</p>
-            </div>
-         </div>
-         
-         
-         <div class="call-button col-md-4 mx-auto mt-3">
-               <div class="col-m">
-                <a href="checkout.html" class="border  wow flipInX  animated shadow" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s; background-color:#718aff;">¡Quiero hacerlo!&nbsp;</a>
-              </div>
-               
-           </div>
-    </div>
-  </div>
-   
-   <div class="pt-5 pb-2 text-dark bg-light">
-    <div class="container  pt-4 pb-5" >
-                <h1 style="font-size:37px; "  class="text-center"><b id="opiniones-titulo">¡Miles de alumnos de todo el mundo lo recomiendan!</b></h1>
 
-       <div class="pt-5 ">
-        <div class="text-center mx-auto text-dark row">
-              <div class="col-xl-4 pt-5 pt-md-1  col-md-4  mb-60 block " data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">
-                        <div class=" text-dark f-18">
-                          <h5 class="text-center font-weight-bold" id="opinion1-titulo">Gracias, gracias y mas gracias!</h5>
-                          <div id="opinion1">
-                            "El Prompt Engineering transformó mi enfoque. Empecé a explorarlo hace dos meses, y desde entonces, noté cómo podía aplicar sus principios para optimizar diversos aspectos de mi trabajo. Hoy me siento más capaz y eficiente. Es una herramienta excepcional, y deseaba compartir mi experiencia para que otros comprendan cuánto valor he obtenido a través de esta metodología."
-                          </div>  
-                            <br>
-                            <div class=" pt-md-1 " style="color:#ffd322;"> 
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                        </div>
+  <!-- Product section -->
 
-                        <div class="pt-2 f-14 semibold text-uppercase sp-20" id="opinion1-nombre">David Palatino</div>
-                    </div>
-
-
-
-                    <div class="col-xl-4 pt-5 pt-md-1 col-md-4  mb-60 block" data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
-                        <div class=" f-18  text-adaptive ">
-                             <h5 class="text-center font-weight-bold" id="opinion2-titulo">Estoy aplicandolo a mis proyectos</h5>
-                             <div id="opinion2">
-                              "Al explorar los apartados sobre Prompt Engineering, quedé impresionado por la claridad con la que se detalla el funcionamiento de esta metodología en diversos contextos. Aunque sigo abordando las mismas tareas que antes, ahora tengo la capacidad de estructurarlas de manera más eficiente y en momentos oportunos. Como resultado, estoy experimentando un aumento en mi productividad y logrando resultados más satisfactorios. ¡Gracias por compartir su genialidad!"  
-                             </div>  
-                             
-                            <div class="pt-2  pt-md-1" style="color:#ffd322;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half"></i>
-                            </div>
-                        </div>
-
-                        <div class="mt-2 f-14 semibold text-uppercase sp-20" id="opinion2-nombre">Matias Avellaneda</div>
-                    </div>
-
-
-
-                    <div class="col-xl-4 pt-5  pt-md-1 col-md-4  " data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
-                        <div class=" f-18  text-adaptive ">
-                             <h5 class="text-center font-weight-bold" id="opinion3-titulo">Excelente complemento</h5>
-                             <div id="opinion3">
-                              "Siendo usuario activa de la tecnología, desde hace tiempo me he sumergido en el Prompt Engineering. Aunque mi campo es diferente, encontré sorprendente cómo el enfoque desglosado en el libro "Aprende Prompt Engineering" logra explicar de manera concisa y comprensible este mundo fascinante. He compartido este recurso con mis colegas y todos han quedado asombrados. Incluso quienes son nuevos en este ámbito tecnológico lo han asimilado sin dificultad, por lo que lo respaldo completamente. ¡Un producto sobresaliente, 5/5!  
-                             </div>  
-                            
-                            <div class="pt-2" style="color:#ffd322;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                        </div>
-
-                        <div class="mt-2 f-14 semibold text-uppercase sp-20" id="opinion3-nombre">Daniel Fernandez</div>
-                    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-       <div class="call-button bg-light pb-5">
-            <div class="row pb-3">
-              <div class="col-md-3  col-10 mx-auto">
-                <a href="checkout.html" class="   wow flipInX animated shadow" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;  background-color:#718aff;">¡Quiero tenerlo!</a>
-              </div>
-            </div>
-          </div>
-    
-  <section class="text-center py-5" id=" " style="background-color:#718aff;">
+  <section class="product-section">
     <div class="container">
-      <div class="section-heading text-center">
-        <h2 class="mt-2 mb-1 pb-3 text-light"><i class="fa fa-question-circle" aria-hidden="true">&nbsp;</i>Nos suelen preguntar:</h2>
-      </div>
-      <div class="accordion mt-4" id="accordionExample">
-        <div class="card ">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">#1 ¿Por cuánto tiempo lo tengo?</button></h5>
-          </div>
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
-            <div class="card-body" id="preguntas1"> De por vida. Podés descargarlo ilimitadas veces para leerlo en tu PC, celular, tablet o para imprimirlo.</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">#2 ¿Necesito internet para hacerlo? </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" style="">
-            <div class="card-body"  id="preguntas2"> Sólo necesitás internet para descargar el material la primera vez. El formato es muy liviano, asi que no debés preocuparte por los datos de tu celular. Es muy fácil y te vamos a guiar paso a paso</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">#3 ¿Tienen garantía de devolución? </button></h5>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
-            <div class="card-body"  id="preguntas3"> Estamos seguros de que este curso te va a encantar. Si por alguna razón no te satisface durante los primeros 7 días, te devolveremos el 100% de tu dinero.</div>
-          </div>
-        </div>
-         
-      </div>
-      <div class="call-button mt-5">
-        <div class="row justify-content-md-center">
-          <div class="col-md-3">
-          </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-12 mb-5">
+          <h1 class="text-center">NUESTROS LIBROS</h2>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Secondary Color Section -->
-   
-    
 
-
-  <!-- Bottom Product -->
-    
-  <section class="bottom-product bg-white" >
-    <div class="container ">
-      <div class="row align-items-center">
-        <div class="col-md-5">
-          <div class="row">
-        <img id="producto3-img" src="img/producto3.png" class="img-fluid rounded" alt="product">
-
-             
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6 col-12 mb-5">
+          <div class="card text-left">
+            <img src="img/prompt engineering.png" class="card-img-top img-fluid" alt="Producto 1">
+            <div class="card-body">
+              <h3 class="h3 text-white text-center">PROMPT ENGINEERING</h3>
+              <p class="card-text text-white" style="font-size: 18px;">Descubrí el emocionante mundo de ChatGPT y como funciona el lenguaje
+                humano-Maquina. Hace que las IA's trabajen por vos. ¡El futuro es hoy! No esperes más!</p>
+              <a href="./producto.html?curso=prompt" class="btn btn-primary">Ver Libro</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 ml-md-5 my-auto text-left">
-          <div class="section-heading">
-             <h1 class="mt- "><b id="parrafo-final-titulo">Iniciá tu camino HOY en Prompt Engineering</b></h1>
-          </div>
-          <div class="feature-list mt-4">
-            <p class="" id="parrafo-final">Descargá el curso en tu e-mail y alcanzá todo el potencial que ofrece ChatGPT</p>
-              
-              <h1 class="mx-auto ml-md-0 rounded mt-4  shadow text-white font-weight-bold p-2 mt-3 col-8 col-md-6 text-center" style="background-color:#fc5757;"><strike><em id="precioTotalFinal">$4.330 </em></strike><span  > <em id="precioConDescuentoFinal">$1299</em></span></h1>
-             
-   </div>
-          <div class="call-button mt-5">
-            <div class="row">
-              <div class="col-md-6 col-10 mx-auto">
-                <a href="checkout.html" class="   wow flipInX animated " data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;  background-color:#718aff;">¡Lo quiero!</a>
-              </div>
-              <div class="col-md-6 text-center my-3">
-                <img src="img/seguridad.png" class="img-fluid wow flipInX animated w-75" data-wow-delay="0.3s" alt="payments" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-              </div>
+        <div class="col-md-4 col-sm-6 col-12 mb-5">
+          <div class="card text-left">
+            <img src="img/procrastinacion.png" class="card-img-top" alt="Producto 2" >
+            <div class="card-body">
+              <h3 class="h3 text-white text-center">VENCE LA PROCRASTINACIÓN</h3>
+              <p class="card-text text-white" style="font-size: 18px;">En este libro vas a encontrar herramientas para volverte una persona mas
+                metodica y estructurada. No dejes todo para despues!</p>
+              <a href="./producto.html?curso=procrastinacion" class="btn btn-primary">Ver Libro</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Website Footer -->
-    
-  <footer>
-      <div class="" id="ch">
-               <img class="img-fluid d-block " src="img/logo.png">
-     </div>
+
+  <!-- Sección 1 -->
+  <section class="quebuscamos-section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-2" id="gr">
-        <img src="img/logo1.png" alt="logo" class="img-fluid w-30">
+      <div class="row justify-content-center">
+
+        <div class="col-md-4 col-10 mx-auto my-2" style="background-color: rgba(0, 0, 0, 0.781); border-radius: 25px;">
+          <div class="p-3 d-flex align-items-center">
+            <span class="me-4">
+              <i class="bi bi-credit-card fa-4x text-white"></i>
+            </span>
+            <h2 class="m-0 text-center text-white">PAGO PROTEGIDO</h2>
+
+          </div>
+          <p class="text-left text-white text-center" style="font-size: 20px;">Tu tranquilidad es nuestra prioridad número uno. A través de Mercado Pago tu
+            pago y tus datos se encuentran protegidos. </p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4 col-10 mx-auto my-2" style="background-color: rgba(0, 0, 0, 0.781); border-radius: 25px;">
+          <div class="p-3 d-flex align-items-center">
+            <span class="me-4">
+              <i class="bi bi-phone fa-4x text-white"></i>
+            </span>
+            <h2 class="m-0 text-center text-white">¡LEELO EN TU CELU!</h2>
+
+          </div>
+          <p class="text-left text-white text-center p-10" style="font-size: 20px;">Es facíl, compras y te llegá en formato PDF a tu correo. Podes visualizarlo
+            desde tu celular, tablet o pc. Te queda el acceso de por vida!</p>
         </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 2 -->
+  <section class="quienes-somos">
+    <div class="container">
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 style="font-size: 40px;">¿Quiénes somos?</h2>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-          <div class="footer-links">
-            <ul>
-              <li><a href="javascript:void(0)" data-toggle="modal" data-target="#terms">Términos y Condiciones</a></li>
-            </ul>
+      </div>
+      
+      <div class="row align-items-md-center">
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img src="img/Logo.png" alt="Imagen" class="img-fluid quienes-imagen">
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <p class="lead" style="font-size: 30px;">Librería Digital Argentina, nace de la idea donde haya una bliblioteca on-line. Donde puedas acceder a libros que te ayuden a desarrollarte. Buscamos hacerles llegar todo tipo de información útil. En un mundo donde cada vez es más fuerte el mundo digital ofrecemos herramientas y conocimientos para que puedas alcanzar todo tu potencial.</p>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- Terms & Condition Modal -->
-  <div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="termstitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="termstitle">Políticas de Privacidad y condiciones</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body" id="yt-player">
-          <div class="row">
+  </section>
+
+  <div class="py-5 text-center">
+    <div class="container">
+        <div class="row">
+          <hr>
             <div class="col-md-12">
-              <p class="font-weight-normal">Este curso ha sido diseñado para ser completado de manera autónoma y sin la supervisión de un instructor profesional en Prompt Engineering. Queremos informarle que este curso, junto con toda la información, instrucciones e indicaciones proporcionadas, ha sido desarrollado siguiendo los principios generales de la disciplina, aplicables en términos generales. Le recomendamos tener en cuenta que el Prompt Engineering implica interacciones técnicas y creativas.Los creadores, el vendedor y cualquier otra entidad involucrada en la distribución de este curso de Prompt Engineering no asumen responsabilidad por cualquier lesión o perjuicio directo o indirecto que pueda surgir de una participación inapropiada o incorrecta. Tenga en cuenta que los resultados individuales pueden variar y no se puede garantizar un impacto específico en sus habilidades. Al adquirir este curso en línea, a través de una plataforma digital, acepta recibir esta información en formato electrónico.</p>
+                <h3 class="font-bold" style="font-size: 40px;">¿Querés hablar con nosotros? ¡Escribinos ahora!</h3>
+                <hr>
             </div>
-          </div>
         </div>
+        <div class="row text-center">
+            <div class="col-md-4 text-center">
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="" target="_blank" href="https://api.whatsapp.com/send?phone=543516612166&amp;text=Hola!%20te%20consulto%20por%20el%20curso%20de%20Prompt%20engineering"> <img class="img-fluid d-block  mx-auto" src="img/whatsapp.png"> </a>
+            </div>
+            <div class="col-md-4 text-center">
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<footer>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-2" id="gr">
+    <img src="img/Logo.png" alt="logo" class="img-fluid w-30">
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+      <div class="footer-links">
+        <button type="button" class="btn btn-link" id="alertButton" style="color: rgb(252, 194, 71);">Terminos y Condiciones</button>
       </div>
     </div>
   </div>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+</div>
+</footer>
+
+  <!-- Enlace a los archivos de Bootstrap JS (jQuery y Popper.js son requeridos por Bootstrap) -->
+  <script>
+    // Escuchar el evento clic del botón
+    document.getElementById('alertButton').addEventListener('click', function() {
+        // Utilizar SweetAlert para mostrar una alerta
+        Swal.fire({
+            title: 'Terminos y Condiciones',
+            text: 'Bienvenido a Librería Digital Argentina, una plataforma dedicada a la venta de libros digitales. Antes de utilizar nuestros servicios, te pedimos que leas detenidamente los siguientes términos y condiciones. Al acceder y utilizar nuestro sitio web y servicios, aceptas estar sujeto/a a los siguientes términos y condiciones. Uso Autónomo: Nuestros libros digitales han sido diseñados para ser completados de manera autónoma y sin la supervisión de un instructor profesional. Al adquirir y utilizar nuestros libros, aceptas la responsabilidad de completarlos por tu cuenta siguiendo las instrucciones y directrices proporcionadas. Información General: La información, instrucciones e indicaciones proporcionadas en nuestros libros digitales han sido desarrolladas siguiendo principios generales de la disciplina, aplicables en términos generales. Sin embargo, ten en cuenta que la aplicación de estos principios implica interacciones técnicas y creativas que pueden variar según la situación. Limitación de Responsabilidad: Los creadores, vendedores y cualquier otra entidad involucrada en la distribución de nuestros libros digitales no asumen responsabilidad por cualquier lesión o perjuicio directo o indirecto que pueda surgir de una participación inapropiada o incorrecta en la utilización de los libros. Los resultados individuales pueden variar y no podemos garantizar un impacto específico en tus habilidades. Propiedad Intelectual: Los contenidos de nuestros libros digitales, incluyendo textos, imágenes y otros materiales, están protegidos por derechos de propiedad intelectual. No está permitida la reproducción, distribución o modificación de dichos contenidos sin autorización expresa. Aceptación Electrónica: Al adquirir nuestros libros digitales a través de nuestra plataforma en línea, aceptas recibir estos términos y condiciones en formato electrónico. Privacidad: Tu privacidad es importante para nosotros. Consulta nuestra Política de Privacidad para comprender cómo recopilamos, utilizamos y protegemos tus datos personales. Cambios en los Términos: Nos reservamos el derecho de actualizar o modificar estos términos y condiciones en cualquier momento. Te recomendamos revisar periódicamente esta sección para mantenerte informado/a sobre cualquier cambio. Al utilizar nuestros servicios, aceptas cumplir con estos términos y condiciones. Si no estás de acuerdo con alguno de los términos establecidos aquí, te pedimos que no utilices nuestros servicios.',
+            confirmButtonText: 'Aceptar'
+        });
+    });
+</script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/jquery/app.js"></script>
-  <div class="cta-fixed">
-    <div class="call-button container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-10">
-          <a href="checkout.html" class=" " style="background-color:#718aff;">¡Quiero hacerlo!</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '431854575502878');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=431854575502878&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-  <script src="./vendor/index.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+
 </body>
 
-<!-- Mirrored from aprendeyogaacademia.com/ayurveda/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 16:23:37 GMT -->
 </html>
+
